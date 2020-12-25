@@ -1,6 +1,6 @@
+import { hot } from 'react-hot-loader'
 import { constVoid } from 'fp-ts/lib/function'
 import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
 import axios from 'axios'
 import * as t from 'io-ts'
 import * as E from 'fp-ts/lib/Either'
@@ -32,7 +32,7 @@ const NewTab = () => {
 
   return (
     <div className="p-8">
-      <h1 className="text-xl">This is the new tab page.</h1>
+      <h1 className="text-xl">This is thee new tab page.</h1>
       <p className="text-lg">The background script is moving the tabs.</p>
       <img src="bitcoin.gif" alt="bitcoin" />
       <p>
@@ -46,9 +46,5 @@ const NewTab = () => {
   )
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <NewTab />
-  </React.StrictMode>,
-  document.getElementById('root'),
-)
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+export default hot(module)(NewTab)
